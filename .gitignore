@@ -1,0 +1,14 @@
+## ide
+**/.idea
+*.iml
+
+ant-design-vue-jeecg/node_modules
+ant-design-vue-*/node_modules
+
+## backend
+**/target
+**/logs
+
+## front
+**/*.lock
+logs/*.log
