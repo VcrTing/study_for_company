@@ -1,6 +1,6 @@
-package com.zeng.sotre;
+package com.zeng.framework.sotre;
 
-import com.zeng.constant.data.DataSourceConstant;
+import com.zeng.framework.constant.data.DataSourceConstant;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 // 這裡不加 @component，會在 config 裡面把這個加進 ioc

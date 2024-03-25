@@ -1,13 +1,12 @@
 package com.zeng.conf.data;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
-import com.zeng.constant.data.DataSourceConstant;
-import com.zeng.sotre.StoreAllDataSource;
-import com.zeng.sotre.StoreDynamicDataSource;
+import com.zeng.framework.constant.data.DataSourceConstant;
+import com.zeng.framework.sotre.StoreAllDataSource;
+import com.zeng.framework.sotre.StoreDynamicDataSource;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

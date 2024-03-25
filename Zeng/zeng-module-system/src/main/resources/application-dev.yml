@@ -1,6 +1,6 @@
 
 server:
-  port: 80
+  port: 8080
 
 spring:
   datasource:
@@ -11,7 +11,7 @@ spring:
     dynamic:
       datasource:
         master:
-          url: jdbc:mysql://42.192.15.218:3306/yc_study?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+          url: jdbc:mysql://42.192.15.218:3306/yc_master?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
           username: qiong
           password: qiong
         multi-one:
@@ -23,11 +23,19 @@ spring:
           username: qiong
           password: qiong
 
-
 logging:
   level:
-    root: debug
+    root: info
 
 mybatis-plus:
   configuration:
   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 登录 = /camunda/app/welcome/default/#!/login
+camunda.bpm:
+  admin-user:
+    id: admin  #用户名
+    password: 123  #密码
+    firstName: Zeng
+  filter:
+    create: All tasks

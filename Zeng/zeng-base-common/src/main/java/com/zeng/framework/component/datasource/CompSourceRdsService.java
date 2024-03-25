@@ -1,7 +1,7 @@
-package com.zeng.component.datasource;
+package com.zeng.framework.component.datasource;
 
-import com.zeng.constant.data.DataSourceConstant;
-import com.zeng.sotre.StoreDynamicDataSource;
+import com.zeng.framework.constant.data.DataSourceConstant;
+import com.zeng.framework.sotre.StoreDynamicDataSource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 

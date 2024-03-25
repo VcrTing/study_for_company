@@ -1,4 +1,4 @@
-package com.zeng.sotre;
+package com.zeng.framework.sotre;
 
 import javax.sql.DataSource;
 import java.util.Map;

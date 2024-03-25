@@ -1,7 +1,7 @@
-package com.zeng.component.aopsys;
+package com.zeng.framework.component.aopsys;
 
-import com.zeng.anno.aop.SwitchRds;
-import com.zeng.component.datasource.CompSourceRdsService;
+import com.zeng.framework.anno.SwitchRds;
+import com.zeng.framework.component.datasource.CompSourceRdsService;
 import com.zeng.utils.sys.UtilSysAnnotation;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -11,7 +11,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 
 @Slf4j
 @Aspect
@@ -21,7 +20,7 @@ public class AopSwitchRds implements Ordered {
     @Autowired
     CompSourceRdsService sourceRdsService;
 
-    @Pointcut("@annotation(com.zeng.anno.aop.SwitchRds)")
+    @Pointcut("@annotation(com.zeng.framework.anno.SwitchRds)")
     public void rds() { }
 
     @Around("rds()")

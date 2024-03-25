@@ -1,8 +1,7 @@
-package com.zeng.system.entity.mapper;
+package com.zeng.model.system.entity.mapper;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.zeng.system.entity.SysUser;
+import com.zeng.model.system.entity.SysUser;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

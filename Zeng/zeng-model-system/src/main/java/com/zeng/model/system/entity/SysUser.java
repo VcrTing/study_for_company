@@ -1,4 +1,4 @@
-package com.zeng.system.entity;
+package com.zeng.model.system.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -23,6 +23,7 @@ public class SysUser implements Serializable {
 
     private String username;
     private String password;
+    private String salt;
 
     @TableLogic
     private Integer delFlag;

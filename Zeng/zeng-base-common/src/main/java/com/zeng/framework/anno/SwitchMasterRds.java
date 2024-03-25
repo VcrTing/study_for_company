@@ -1,4 +1,4 @@
-package com.zeng.anno.aop;
+package com.zeng.framework.anno;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

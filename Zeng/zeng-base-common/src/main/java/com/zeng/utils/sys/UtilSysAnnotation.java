@@ -1,6 +1,6 @@
 package com.zeng.utils.sys;
 
-import com.zeng.anno.aop.SwitchRds;
+import com.zeng.framework.anno.SwitchRds;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.reflect.MethodSignature;

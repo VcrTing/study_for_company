@@ -1,4 +1,4 @@
-package com.zeng.constant.data;
+package com.zeng.framework.constant.data;
 
 public interface DataSourceConstant {
 
