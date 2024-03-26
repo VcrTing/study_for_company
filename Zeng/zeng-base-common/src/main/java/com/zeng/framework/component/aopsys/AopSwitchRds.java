@@ -36,6 +36,7 @@ public class AopSwitchRds implements Ordered {
 
             // 只根據名稱進行切換 數據元
             sourceRdsService.switchRdsBySourceName(source);
+            log.info("------------- 切换为" + source + "数据源 -------------");
 
             /*
             if (StringUtils.hasLength(source)) {
@@ -50,7 +51,7 @@ public class AopSwitchRds implements Ordered {
             // 執行
             proceed = jp.proceed();
         } finally {
-            System.out.println("出錯了應該刪掉上一個數據元定位");
+            log.warn("AopSwitchRds 需要移除数据源 => ThreadLocal.remove()，但是没有移除");
         }
         return proceed;
     }

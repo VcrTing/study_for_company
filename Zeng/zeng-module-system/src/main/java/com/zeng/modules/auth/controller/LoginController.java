@@ -40,6 +40,6 @@ public class LoginController {
         // 生成 Token
         String token = serviceToken.genJwtToken(user);
         // 返回
-        return Result.ok(new LoginInfo(token, user));
+        return Result.success(new LoginInfo(token, user));
     }
 }

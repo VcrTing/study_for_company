@@ -1,0 +1,24 @@
+
+內存:
+  爆滿可能原因:
+    一瞬间一个请求生成了大量的对象，再加上高并发，内存就炸了
+    GC 次數頻繁，
+    IO 未释放
+  解决方法:
+    1.
+      使用logback日志，内存溢出关键字 OutOfMemoryError / Java heap space # 如果有 nohup.out 日志就好了
+      内存溢出并不会一下子导致应用挂掉，此时就能去根据 8080 端口查看 进程号，再根据进程号查看内存占用情况 # linux 里面可以使用 top
+      # 堆内存，大多数情况，是物理内存的 1/4，
+    2.
+      命令行查看 gc 情况 # linux 里面使用 jstat -gc 进程ID 1000，表示这个进程，1秒查看一次 gc
+      关心 OC 与 OU 参数，OC 是老年代总容量，OU 是老年代已经使用的大小，
+      OC 约等于 OU 会触发 full gc，后续发现 OU 数值不咋变动，就说明 full gc 失败了，
+    3.
+      命令行查看 哪个 对象 占用内存过多 # linux 里面使用 jmap -histo 进程ID -20，表示打印这个进程前20个对象占用信息
+      bytes 数值表示占用多少内存，class name 表示什么类 # [B 表示 byte 数组，[C 是 char 数组，[java.lang.String 代表是字符串数组
+    4.
+      查看 dump 文件 # jmap -dump:live,file=~/java_dump_.hprof 进程ID，代表导出这个进程的 dump 文件
+      把文件拿到本地，然后打开 java VisualVM 程序，導入進去，查看实例数，然后根据大小排序，
+      然后双击点进去要看的实例，然后点进去看引用，你能发现引用链的
+
+
